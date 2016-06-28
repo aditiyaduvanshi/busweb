@@ -1,40 +1,15 @@
 
 
-.navbar {
-      margin-bottom: 0;
-      background-color: #474e5d;
-      background-image: none; 
-      z-index: 9999;
-      border: 0;
-      font-size: 15px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 3px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar  {
-      color: #1abc9c !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #1abc9c !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
+.form-inline {
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
-  .navbar-brand {
-    font-size: 22px;
-    color: #fff !important;
-    font-weight: 400;
-  }
+h3 {
+ font-weight: 400;
+}
 
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-
-  .container {
-    padding-bottom: 5px;
-  }
-
+p{
+  color: #18bc9;
+}

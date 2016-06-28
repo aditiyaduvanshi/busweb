@@ -1,4 +1,7 @@
-<html>
+
+
+
+  <html>
 <head>
     <meta charset="utf-8">
     <title>Basic Bootstrap Template</title>
@@ -7,8 +10,7 @@
     <!-- Optional Bootstrap theme -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script>
@@ -89,7 +91,7 @@ $(document).ready(function(){
   }
 
   #d2, #d3 {
-  	display: none;
+    display: none;
   }
 
   img {
@@ -128,10 +130,10 @@ $(document).ready(function(){
 </head>
 <body>
     
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle navbar-responsive-collapse" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -140,9 +142,9 @@ $(document).ready(function(){
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-         <li class=" c1"><a href="#">Buses between stops</a></li>
-        <li class="c2"><a href="#">Bus stops</a></li>
-        <li class="c3"><a href="#">Bus route</a></li>
+        <li class="c1"><a href="#">Buses between stops</a></li>
+        <li class="c2"><a href="#">Bus route</a></li>
+        <li class="c3"><a href="#">Bus stops</a></li>
       </ul>
     </div>
   </div>
@@ -150,6 +152,7 @@ $(document).ready(function(){
 
 <div class="container-fluid bg-1 text-center">
   <h2>Jaipur Buses</h2><br><p style=""><SMALL>[PINK CITY]</SMALL>
+
 </div>
 
 <div class="container-fluid bg-2">
@@ -192,15 +195,15 @@ $(document).ready(function(){
 
 <div class="container bg-3" id="d1">
 
- <div class="row">
-  <div class="col-sm-12" style="background-color:#474e5d; border-radius:10px">
+ <div class="row" id="d1">
+  <div class="col-sm-12" style="background-color:#18bc9; border-radius:10px">
   Buses between stops
-  <form class="form-inline" role="form">
+  <form class="form-inline" role="form"  action="route.php" method="get">
     <div class="form-group">
-      <input type="email" class="form-control" id="email" placeholder="To">
+      <input type="text" class="form-control" id="email" placeholder="From" name="from">
     </div>
     <div class="form-group">
-      <input type="email" class="form-control" id="pwd" placeholder="From">
+      <input type="text" class="form-control" id="pwd" placeholder="To" name="to">
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
@@ -210,12 +213,12 @@ $(document).ready(function(){
 
 <div class="container bg-3" id="d2">
 
- <div class="row">
-  <div class="col-sm-12" style="background-color:#474e5d; border-radius:10px">
-  Bus stops
-  <form class="form-inline" role="form">
+ <div class="row" id="d2">
+  <div class="col-sm-12" style="background-color:#18bc9; border-radius:10px">
+  Bus route
+  <form class="form-inline" role="form" action="stops.php" method="get" >
     <div class="form-group">
-      <input type="email" class="form-control" id="email" placeholder="Bus No.">
+      <input type="text" class="form-control" id="email" placeholder="Bus No." name="busno">
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
@@ -225,12 +228,12 @@ $(document).ready(function(){
 
 <div class="container bg-3" id="d3">
 
- <div class="row">
-  <div class="col-sm-12" style="background-color:#474e5d; border-radius:10px">
-  Bus route
-  <form class="form-inline" role="form">
+ <div class="row" id="d3">
+  <div class="col-sm-12" style="background-color:#18bc9; border-radius:10px">
+  Bus stops
+  <form class="form-inline" role="form" action="bus.php" method="get" >
     <div class="form-group">
-      <input type="email" class="form-control" id="email" placeholder="">
+      <input type="text" class="form-control" id="email" placeholder="" name="stop">
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
