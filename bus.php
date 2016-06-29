@@ -193,7 +193,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$a=trim($_GET["stop"])
+$a=trim($_GET["stop"]);
 
 $sql = "SELECT * FROM bus where haults like '%".$a."%'";
 
