@@ -171,10 +171,10 @@
     </script>
 
 <?php
-$servername = "localhost:3307";
-$username = "root";
-$password = "";
-$dbname = "jaipurbus";
+$servername = "us-cdbr-iron-east-04.cleardb.net";
+$username = "b1843ce9e3940d";
+$password = "b3cfc7b0";
+$dbname = "heroku_2cdcc09aa285ff4";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

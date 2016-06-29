@@ -172,10 +172,15 @@
     </script>
 
 <?php
-$servername = "localhost:3307";
-$username = "root";
-$password = "";
-$dbname = "jaipurbus";
+//$servername = "localhost:3307";
+//$username = "root";
+//$password = "";
+//$dbname = "jaipurbus";
+
+$servername = "us-cdbr-iron-east-04.cleardb.net";
+$username = "b1843ce9e3940d";
+$password = "b3cfc7b0";
+$dbname = "heroku_2cdcc09aa285ff4";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -188,8 +193,6 @@ if ($conn->connect_error) {
 $a=trim($_GET["from"]);
 $b=trim($_GET["to"]);
 
-echo $a;
-echo $b;
 
 $sql = "SELECT * FROM bus where haults like '%".($a)."%' && haults like '%".($b)."%'";
 
@@ -217,11 +220,11 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
     	$temp=explode(";",$row["haults"]);
     	for ($x = 0; $x < count($temp); $x++){
-	    	if(stripos($temp[$x], $_GET["from"])!==false){
+	    	if(stripos($temp[$x], $a)!==false){
 	        	$k=$x;
     		}
 
-	    	if(stripos($temp[$x], $_GET["to"])!==false){
+	    	if(stripos($temp[$x], $b)!==false){
 	        	$m=$x;
 	    	}
 	    }
