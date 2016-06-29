@@ -61,6 +61,12 @@ p{
     color: #18bc9;
 }
 
+@media (max-width: 730px) {
+    #d2, #d3, #d1{
+        display: none;
+    }
+  }
+
 </style>
 
 </head>

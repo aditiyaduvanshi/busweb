@@ -54,6 +54,12 @@
     border-width: 2px;
 }
 
+@media (max-width: 730px) {
+    #d2, #d3, #d1{
+        display: none;
+    }
+  }
+
 </style>
 
 </head>
