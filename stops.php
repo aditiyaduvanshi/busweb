@@ -43,6 +43,16 @@
     display: none;
   }
 
+  hr {
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px;
+}
+
 </style>
 
 </head>
@@ -74,12 +84,12 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <img class="img-responsive" src="bus2.png" alt="">       
                 </div>
 
  <div class="row" id="d1">
-  <div class="col-sm-12" style="background-color:#18bc9; border-radius:10px">
+  <div class="col-sm-6" style="background-color:#18bc9; border-radius:10px">
   <h3>Buses between stops</h3>
   <form class="form-inline" role="form"  action="route.php" method="get">
     <div class="form-group">
@@ -93,7 +103,7 @@
  </div>
 </div>
  <div class="row" id="d2">
-  <div class="col-sm-12" style="background-color:#18bc9; border-radius:10px">
+  <div class="col-sm-6" style="background-color:#18bc9; border-radius:10px">
   <h3>Bus route</h3>
   <form class="form-inline" role="form" action="stops.php" method="get" >
     <div class="form-group">
@@ -106,7 +116,7 @@
 
 
  <div class="row" id="d3">
-  <div class="col-sm-12" style="background-color:#18bc9; border-radius:10px">
+  <div class="col-sm-6" style="background-color:#18bc9; border-radius:10px">
   <h3>Bus stops</h3>
   <form class="form-inline" role="form" action="bus.php" method="get" >
     <div class="form-group">
@@ -182,7 +192,7 @@ if ($result->num_rows > 0) {
 	?>
     
     <div class="container">
-    <h3><b>Bus no. <?php echo $_GET["busno"] ?> route</b></h3>
+    <h3 class="margin" style="margin-top:40px;margin-bottom:40px;color:#2c3e50;"><b>Bus no. <?php echo $_GET["busno"] ?> route</b></h3>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -213,6 +223,14 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+
+<div class="container">
+  <hr>
+<h4 style="color:#2c3e50;margin-bottom:20px;"><b>contact</b></h4>
+<p style="color:#18bc9c;margin-bottom:1px;"><b><i>aditi yaduvanshi</i></b><br></p>
+<p><b>Email - aditi.yaduvanshi95@gmail.com</b></p>
+    
+</div>
 
 </body>
 </html>
