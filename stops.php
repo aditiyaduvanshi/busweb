@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>jaipur bus</title>
 
     
 
@@ -171,13 +171,14 @@
     </script>
 
 <?php
-$servername = "us-cdbr-iron-east-04.cleardb.net";
-$username = "b1843ce9e3940d";
-$password = "b3cfc7b0";
-$dbname = "heroku_2cdcc09aa285ff4";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db);
 
 // Check connection
 if ($conn->connect_error) {

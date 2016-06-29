@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="jaipur bus directory">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>jaipur bus</title>
 
     
 
@@ -171,20 +171,31 @@
     </script>
 
 <?php
-$servername = "us-cdbr-iron-east-04.cleardb.net";
+/*$servername = "us-cdbr-iron-east-04.cleardb.net";
 $username = "b1843ce9e3940d";
 $password = "b3cfc7b0";
 $dbname = "heroku_2cdcc09aa285ff4";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);*/
+
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM bus where haults like '%".$_GET["stop"]."%'";
+$a=trim($_GET["stop"])
+
+$sql = "SELECT * FROM bus where haults like '%".$a."%'";
 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -203,7 +214,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
     	$temp=explode(";",$row["haults"]);
     	for ($x = 0; $x < count($temp); $x++){
-	    	if(stripos($temp[$x], $_GET["stop"])!==false){
+	    	if(stripos($temp[$x], $a)!==false){
 	       ?>
          <tr>
         <td><a href=<?php echo "'stops.php?busno=".$row["no"]."'" ; ?>  ><?php echo $row["no"] ?></a></td>

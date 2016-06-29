@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="jaipur bus directory">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>jaipur bus</title>
 
     
 
@@ -187,7 +187,7 @@ p{
 <div class="container">
 <h4 style="color:#2c3e50;margin-bottom:20px;"><b>contact</b></h4>
 <p style="color:#18bc9c;margin-bottom:1px;"><b><i>aditi yaduvanshi</i></b><br></p>
-<p style="margin-bottom:0px;"><b>Email - aditi.yaduvanshi95@gmail.com</b></p>
+<p><b>Email - aditi.yaduvanshi95@gmail.com</b></p>
     
 </div>
 </body>
