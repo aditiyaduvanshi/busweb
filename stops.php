@@ -99,10 +99,10 @@
   <h3>Buses between stops</h3>
   <form class="form-inline" role="form"  action="route.php" method="get">
     <div class="form-group">
-      <input type="text" class="form-control" id="email" placeholder="From" name="from">
+      <input type="text" class="form-control" id="example1" placeholder="From" name="from">
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" id="pwd" placeholder="To" name="to">
+      <input type="text" class="form-control" id="example2" placeholder="To" name="to">
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
@@ -113,7 +113,7 @@
   <h3>Bus route</h3>
   <form class="form-inline" role="form" action="stops.php" method="get" >
     <div class="form-group">
-      <input type="text" class="form-control" id="email" placeholder="Bus No." name="busno">
+      <input type="text" class="form-control" id="example3" placeholder="Bus No." name="busno">
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
@@ -126,7 +126,7 @@
   <h3>Bus stops</h3>
   <form class="form-inline" role="form" action="bus.php" method="get" >
     <div class="form-group">
-      <input type="text" class="form-control" id="email" placeholder="" name="stop">
+      <input type="text" class="form-control" id="example4" placeholder="" name="stop">
     </div>
     <button type="submit" class="btn btn-default">Search</button>
   </form>
@@ -175,6 +175,42 @@
     });
 });
     </script>
+
+    <script src="js/jquery.bootcomplete.js"></script>
+
+     <script type="text/javascript">
+    $('#example1').bootcomplete({
+        url:'auto.php',formParams: {
+            'stop' : $('#example1')
+        }
+    });
+</script>
+
+
+     <script type="text/javascript">
+    $('#example2').bootcomplete({
+        url:'auto.php',formParams: {
+            'stop' : $('#example2')
+        }
+    });
+</script>
+
+
+     <script type="text/javascript">
+    $('#example3').bootcomplete({
+        url:'auto.php',formParams: {
+            'stop' : $('#example3')
+        }
+    });
+</script>
+
+     <script type="text/javascript">
+    $('#example4').bootcomplete({
+        url:'auto.php',formParams: {
+            'stop' : $('#example4')
+        }
+    });
+</script>
 
 <?php
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
@@ -235,7 +271,7 @@ $conn->close();
   <hr>
 <h4 style="color:#2c3e50;margin-bottom:20px;"><b>contact</b></h4>
 <p style="color:#18bc9c;margin-bottom:1px;"><b><i>aditi yaduvanshi</i></b><br></p>
-<p><b>Email - aditi.yaduvanshi95@gmail.com</b></p>
+<p>Email - aditi.yaduvanshi95@gmail.com</p>
     
 </div>
 
