@@ -286,7 +286,7 @@ if ($result->num_rows > 0) {
   </div>
   <?php 
 } else {
-    echo "0 results";
+    echo "No Direct Bus Route Availale";
 }
 $conn->close();
 ?>
